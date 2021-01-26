@@ -62,6 +62,14 @@ body {
     color: white;
 }
 
+.name-space {
+    margin: auto;
+    text-align: center;
+    padding: 2em;
+    size: 20px;
+    font-weight: bold;
+}
+
 .hidden {
     display: none !important;
 }

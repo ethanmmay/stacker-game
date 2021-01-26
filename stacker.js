@@ -9,6 +9,4 @@ function setPlayer(event) {
     document.getElementById("nameSpace").innerHTML = playerName
     form.reset()
     form.classList.add("hidden")
-    draw()
-    drawScoreboard()
 }

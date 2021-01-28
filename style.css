@@ -67,6 +67,8 @@ body {
     padding: 2em;
     font-weight: bold;
     justify-content: space-evenly;
+    border-bottom: 2px solid white;
+    border-radius: 10px;
 }
 
 .name-space {
@@ -87,6 +89,14 @@ body {
     vertical-align: center;
     margin-top: -3px;
     position: absolute;
+}
+
+.game-space {
+    background-color: #40e0d090;
+    width: auto;
+    height: 85%;
+    margin: 1em;
+    border-radius: 10px;
 }
 
 .hidden {

@@ -7,6 +7,7 @@ function setPlayer(event) {
 
     document.getElementById("nameArea").classList.remove("hidden")
     document.getElementById("changePlayerButton").classList.remove("hidden")
+    document.getElementById("gameSpace").classList.remove("hidden")
     document.getElementById("nameSpace").innerHTML = playerName
     form.reset()
     form.classList.add("hidden")

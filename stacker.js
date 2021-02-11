@@ -1,14 +1,25 @@
-function setPlayer(event) {
-    event.preventDefault()
-    let form = event.target
 
-    console.log(form.playerName.value + " is now the current Player's Name")
-    let playerName = form.playerName.value
+let squareStart = 4
 
-    document.getElementById("nameArea").classList.remove("hidden")
-    document.getElementById("changePlayerButton").classList.remove("hidden")
-    document.getElementById("gameSpace").classList.remove("hidden")
-    document.getElementById("nameSpace").innerHTML = playerName
-    form.reset()
-    form.classList.add("hidden")
+function createGrid() {
+    let template = ""
+    for (let i = 1; i < 85; i++) {
+        template += `
+            <div class="stacker-square" id="stackerSquare${i}">${i}</div>
+        `
+    }
+    document.getElementById("gameGrid").innerHTML = template
+    let timer = setTimeout(gameUpdate(), 1000)
 }
+
+
+function gameUpdate() {
+    // keep falling square falling
+    let i = squareStart
+    document.getElementById(`stackerSquare${i}`).classList.remove("square-highlight")
+    document.getElementById(`stackerSquare${i+7}`).classList.add("square-highlight")
+    i+=7
+}
+
+
+createGrid()
